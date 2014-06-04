@@ -3,7 +3,10 @@
 # Should not result in an immediate segfault, but who cares, right?
 set +e
 
-# A devlish cpython payload
+# A devlish cpython payload. The hex in the exec does the following:
+# from ctypes import c_int8
+# from struct import calcsize
+# c_int8.from_address(id(4) + calcsize('PP')).value = 5
 payload=$(cat << EOF
 exec('\
 \x66\x72\x6f\x6d\x20\x63\x74\x79\
