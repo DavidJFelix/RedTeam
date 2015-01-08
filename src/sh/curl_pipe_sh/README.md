@@ -5,7 +5,7 @@ This tactic is designed to prey on `curl | sh` pattern that is frequently used f
 Piping curl into shell is a voluntary remote code execution.
 Many people (including me) would argue that piping curl into shell is more vulnerable than the average software install.
 
-The goal behind this tactic is to use the `curl | sh` pattern as a watering hole and instead of passing useful software, pass a malicious scriot
+The goal behind this tactic is to use the `curl | sh` pattern as a watering hole and instead of passing useful software, pass a malicious script.
 In the example install.sh script, the malicious script is a simple `rm -rf` on the root filesystem.
 The sky is the limit and you shouldn't hinder your creativity.
 Try hiding your tracks or more elaborate scripts.
