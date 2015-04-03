@@ -1,0 +1,6 @@
+create trigger zombie
+before delete
+on {{table-name}}
+begin
+    insert select * from {{table-name}};
+end;
